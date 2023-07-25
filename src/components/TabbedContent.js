@@ -5,15 +5,14 @@ function TabContent({ item }) {
 	const [likes, setLikes] = useState(0);
 
 	function handleInc() {
-		setLikes(likes + 1);
+		setLikes((likes) => likes + 1);
 	}
 
 	function superTripleInc() {
-		setLikes(likes + 3);
+		setLikes((likes) => likes + 3);
 	}
 
 	function handleUndo() {
-		// likes && setLikes((s) => s - 1);
 		setShowDetails(true);
 		setLikes(0);
 	}
